@@ -7,10 +7,9 @@ const thankSection = document.getElementById('thank');
 for (let i = 0; i < rating.length; i++) {
   rating[i].addEventListener('click', function () {
     a.textContent = rating[i].textContent + ' ';
+    submitBtn.addEventListener('click', function () {
+      ratingSection.style.display = 'none';
+      thankSection.style.display = 'grid';
+    });
   });
 }
-
-submitBtn.addEventListener('click', function () {
-  ratingSection.style.display = 'none';
-  thankSection.style.display = 'grid';
-});
